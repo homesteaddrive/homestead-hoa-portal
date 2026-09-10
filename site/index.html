@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Homestead Homeowners Association annual dues status portal">
+  <title>Homestead HOA — Dues Status</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <nav class="documents-menu" aria-label="Community documents">
+      <a class="documents-trigger" href="documents/">Community Documents <span aria-hidden="true">⌄</span></a>
+      <div class="documents-panel">
+        <a href="documents/homestead-ccrs.pdf">CC&amp;Rs <small>PDF</small></a>
+        <a href="minutes/">Meeting Minutes</a>
+        <p>Published documents are public. Private household and account information is not posted.</p>
+      </div>
+    </nav>
+    <header>
+      <p class="eyebrow">HOMESTEAD HOMEOWNERS ASSOCIATION</p>
+      <h1>Annual Dues Status</h1>
+      <p class="intro">Enter your house number and the access code provided by the HOA to see your annual dues status.</p>
+    </header>
+    <form id="status-form" novalidate>
+      <label for="house-number">House number</label>
+      <input id="house-number" name="house-number" inputmode="numeric" autocomplete="address-line1" maxlength="8" required>
+      <label for="access-code">Resident access code</label>
+      <input id="access-code" name="access-code" autocapitalize="characters" autocomplete="off" placeholder="ABCD-EFGH-JKLM" maxlength="14" required>
+      <button type="submit">Check my dues status</button>
+    </form>
+    <section id="result" class="result" aria-live="polite" hidden></section>
+    <p class="help">Need help or did not receive a code? <a href="mailto:homesteaddrivehoa@gmail.com">Contact the HOA.</a></p>
+
+    <p class="privacy">For privacy, this portal never displays payment amounts, owner names, or account details.</p>
+  </main>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
